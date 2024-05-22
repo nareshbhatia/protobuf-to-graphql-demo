@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package models.brand.v1;
+
+message Brand {
+  string id = 1;
+  string name = 2;
+}

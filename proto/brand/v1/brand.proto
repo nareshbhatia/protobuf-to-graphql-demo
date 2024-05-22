@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package brand.v1;
+
+import "models/brand/v1/brand.proto";
+
+// ----- BrandService -----
+service BrandService {
+  rpc GetByID(GetByIDRequest) returns (GetByIDResponse) {}
+}
+
+message GetByIDRequest {
+  string id = 1;
+}
+
+message GetByIDResponse {
+  models.brand.v1.Brand brand = 1;
+}

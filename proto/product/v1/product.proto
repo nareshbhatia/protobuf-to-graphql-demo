@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package product.v1;
+
+import "models/product/v1/product.proto";
+
+// ----- ProductService -----
+service ProductService {
+  rpc ListProducts(ListProductsRequest) returns (ListProductsResponse) {}
+}
+
+// ----- ListProductsRequest -----
+
+message ListProductsRequest {
+}
+
+// ----- ListProductsResponse -----
+
+message ListProductsResponse {
+  repeated models.product.v1.Product products = 1;
+}
