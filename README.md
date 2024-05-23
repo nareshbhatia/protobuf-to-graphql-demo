@@ -7,7 +7,7 @@
 3. In shell 2, run `go run ./brand-server/main.go` to start the brand server.
 4. In shell 3, run `go run ./client/main.go` to run the grpc client.
    It should print a list of products along with their brands.
-5. In shell 4, run `go run server.go` to start the graphql gateway.
+5. In shell 4, run `go run ./graphql-gateway/gateway.go` to start the graphql gateway.
 
 ### Notes
 
