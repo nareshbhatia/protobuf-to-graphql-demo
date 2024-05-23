@@ -1,0 +1,20 @@
+# ---------- Brand ----------
+
+type Brand {
+  id: ID!
+  name: String!
+}
+
+# ---------- Product ----------
+
+type Product {
+  id: ID!
+  name: String!
+  brand: Brand!
+}
+
+# ---------- Queries ----------
+
+type Query {
+  products: [Product!]!
+}
