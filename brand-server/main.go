@@ -23,12 +23,12 @@ type server struct {
 func (s *server) GetByID(ctx context.Context, in *pb.GetByIDRequest) (*pb.GetByIDResponse, error) {
 
 	brands := map[string]*brand.Brand{
-		"1": {
-			Id:   "1",
+		"B1": {
+			Id:   "B1",
 			Name: "Brand 1",
 		},
-		"2": {
-			Id:   "2",
+		"B2": {
+			Id:   "B2",
 			Name: "Brand 2",
 		},
 	}

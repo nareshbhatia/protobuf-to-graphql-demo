@@ -24,14 +24,14 @@ func (s *server) ListProducts(ctx context.Context, in *pb.ListProductsRequest) (
 
 	products := []*product.Product{
 		&product.Product{
-			Id:      "1",
+			Id:      "P1",
 			Name:    "Product 1",
-			BrandId: "1",
+			BrandId: "B1",
 		},
 		&product.Product{
-			Id:      "2",
+			Id:      "P2",
 			Name:    "Product 2",
-			BrandId: "2",
+			BrandId: "B2",
 		},
 	}
 	return &pb.ListProductsResponse{Products: products}, nil

@@ -16,7 +16,7 @@ import (
 
 // Brand is the resolver for the brand field.
 func (r *productResolver) Brand(ctx context.Context, obj *model.Product) (*model.Brand, error) {
-	req := &brandpb.GetByIDRequest{Id: obj.ID}
+	req := &brandpb.GetByIDRequest{Id: obj.BrandID}
 	res, err := r.brandServiceClient.GetByID(ctx, req)
 	if err != nil {
 		log.Printf("Error fetching brand: %v", err)
@@ -45,8 +45,9 @@ func (r *queryResolver) Products(ctx context.Context) ([]*model.Product, error) 
 	products := make([]*model.Product, len(res.Products))
 	for i, product := range res.Products {
 		products[i] = &model.Product{
-			ID:   product.Id,
-			Name: product.Name,
+			ID:      product.Id,
+			Name:    product.Name,
+			BrandID: product.BrandId,
 		}
 	}
 
